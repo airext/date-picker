@@ -244,7 +244,7 @@ public class DatePicker extends EventDispatcher
     {
         switch (event.code)
         {
-            case "DatePicker.DatePicker.Select" :
+            case "DatePicker.Select" :
 
                 var timestamp:Number = parseInt(event.level);
 
@@ -256,7 +256,7 @@ public class DatePicker extends EventDispatcher
 
                 break;
 
-            case "DatePicker.DatePicker.Cancel" :
+            case "DatePicker.Cancel" :
 
                 dispatchEvent(new DatePickerEvent(DatePickerEvent.CANCEL, _date));
 

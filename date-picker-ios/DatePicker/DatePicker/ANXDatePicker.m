@@ -123,12 +123,12 @@ static ANXDatePicker* _sharedInstance = nil;
     
     NSString* timestampAsString = [NSString stringWithFormat:@"%f", timestamp];
     
-    FREDispatchStatusEventAsync(context, (const uint8_t*) "DateSelector.DatePicker.Select", (const uint8_t*) [timestampAsString UTF8String]);
+    FREDispatchStatusEventAsync(context, (const uint8_t*) "DatePicker.Select", (const uint8_t*) [timestampAsString UTF8String]);
 }
 
 - (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc
 {
-    FREDispatchStatusEventAsync(context, (const uint8_t*) "DateSelector.DatePicker.Cancel", (const uint8_t*) "");
+    FREDispatchStatusEventAsync(context, (const uint8_t*) "DatePicker.Cancel", (const uint8_t*) "status");
 }
 
 @end
