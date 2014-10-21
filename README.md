@@ -1,19 +1,27 @@
-date-picker
+date-picker ![License MIT](http://img.shields.io/badge/license-MIT-lightgray.svg)
 ===========
+
+![iOS](http://img.shields.io/badge/platform-ios-blue.svg)
 
 AIR Native Extension for [RMDateSelectionViewController](https://github.com/CooperRS/RMDateSelectionViewController).
 
 ### Usage
 
 ```as3
-picker = new DatePicker();
+var picker:DatePicker = new DatePicker();
 picker.addEventListener(DatePickerEvent.SELECT, selectHandler);
-picker.maximum = new Date(2015, 1);
-picker.minimum = new Date(2013, 1);
-picker.date = new Date();
+picker.addEventListener(DatePickerEvent.CANCEL, cancelHandler);
 
 private function selectHandler(event:DatePickerEvent):void
 {
   trace(event.date); // <- selected date;
 }
+
+private function cancelHandler(event:DatePickerEvent):void
+{
+  trace("Canceled");
+}
+
 ```
+
+### Screenshots
