@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" applicationComplete="init();">
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" applicationComplete="init();" backgroundColor="#FF6666">
 
     <fx:Script><![CDATA[
         import com.github.airext.DatePicker;
         import com.github.airext.events.DatePickerEvent;
 
+        private var picker:DatePicker = new DatePicker();
+
         [Bindable]
-        public var picker:DatePicker = new DatePicker();
+        private var selectedDate:Date;
 
         private function open():void
         {
@@ -15,20 +17,22 @@
 
         private function init():void
         {
-            picker.minimum = new Date(2013, 1);
-            picker.maximum = new Date(2015, 1);
+//            picker.minimum = new Date(2013, 1);
+//            picker.maximum = new Date(2015, 1);
 
             picker.addEventListener(DatePickerEvent.SELECT,
-                                    function (event:DatePickerEvent):void
-                                    {
-                                        trace("SELECT", event.date);
-                                    });
+                function (event:DatePickerEvent):void
+                {
+                    trace("SELECT", event.date);
+
+                    selectedDate = event.date;
+                });
 
             picker.addEventListener(Event.CANCEL,
-                                    function (event:Event):void
-                                    {
-                                        trace("CANCEL");
-                                    });
+                function (event:Event):void
+                {
+                    trace("CANCEL");
+                });
         }
         ]]>
     </fx:Script>
@@ -37,46 +41,29 @@
         <s:RadioButtonGroup id="modeGroup" />
     </fx:Declarations>
 
-    <!--<s:Scroller width="100%" height="100%">-->
+    <s:layout>
+        <s:VerticalLayout horizontalAlign="justify" gap="40" paddingTop="40" />
+    </s:layout>
 
-    <s:VGroup width="100%" height="100%">
-        <s:Button width="100%" label="Show date selection view controller" click="open();" />
-        <s:VGroup width="100%">
-            <s:Label text="Title:" />
-            <s:TextInput width="100%"  text="@{picker.title}" />
-        </s:VGroup>
-        <s:VGroup width="100%">
-            <s:Label text="Mode:" />
-            <s:HGroup>
-                <s:RadioButton group="{modeGroup}" label="Date" change="picker.mode = 'date';" />
-                <s:RadioButton group="{modeGroup}" label="Time" change="picker.mode = 'time';" />
-                <s:RadioButton group="{modeGroup}" label="Both" change="picker.mode = 'dateAndTime';" />
-            </s:HGroup>
-        </s:VGroup>
-        <s:VGroup width="100%">
-            <s:Label text="Title:" />
-            <s:DateSpinner selectedDate="@{picker.date}" />
-        </s:VGroup>
-        <s:HGroup width="100%">
-            <s:Label text="Now Button" />
-            <s:Spacer width="100%" />
-            <s:ToggleSwitch change="picker.appearance.ios.hideNowButton = event.target.selected;" />
-        </s:HGroup>
-        <s:HGroup width="100%">
-            <s:Label text="Motion Effects" />
-            <s:Spacer width="100%" />
-            <s:ToggleSwitch change="picker.appearance.ios.disableMotionEffects = event.target.selected;" />
-        </s:HGroup>
-        <s:HGroup width="100%">
-            <s:Label text="Bouncing Effects" />
-            <s:Spacer width="100%" />
-            <s:ToggleSwitch change="picker.appearance.ios.disableBouncingWhenShowing = event.target.selected;" />
-        </s:HGroup>
-        <s:HGroup width="100%">
-            <s:Label text="Background Taps" />
-            <s:Spacer width="100%" />
-            <s:ToggleSwitch change="picker.appearance.ios.backgroundTapsDisabled = event.target.selected;" />
-        </s:HGroup>
-    </s:VGroup>
+    <s:Button width="100%" label="Show" click="open();" />
+
+    <s:Label text="COLORS AND EFFECTS" />
+
+    <s:SkinnableContainer backgroundColor="#FFFFFF">
+        <s:layout><s:VerticalLayout paddingLeft="10" paddingTop="10" paddingBottom="10" /></s:layout>
+        <s:CheckBox width="100%" label="Black Version"  change="" />
+    </s:SkinnableContainer>
+
+    <s:Label text="The black version only works oif blur effects are enabled. As blur effects require iOS 8 and later, the black version also requires iOS 8 and later" />
+
+    <s:SkinnableContainer backgroundColor="#FFFFFF">
+        <s:layout><s:VerticalLayout paddingLeft="10" paddingTop="10" paddingBottom="10" /></s:layout>
+        <s:CheckBox width="100%" selected="true" label="Now Button" change="picker.appearance.ios.hideNowButton = !event.target.selected;" />
+        <s:CheckBox width="100%" selected="true" label="Motion Effects" change="picker.appearance.ios.disableMotionEffects = !event.target.selected;" />
+        <s:CheckBox width="100%" selected="true" label="Bouncing Effects" change="picker.appearance.ios.disableBouncingWhenShowing = !event.target.selected;" />
+        <s:CheckBox width="100%" selected="true" label="Background Taps" change="picker.appearance.ios.backgroundTapsDisabled = !event.target.selected;" />
+    </s:SkinnableContainer>
+
+    <s:Label text="{selectedDate || ''}" />
 
 </s:Application>
