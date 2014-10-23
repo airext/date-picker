@@ -120,16 +120,15 @@
     if (result != FRE_OK)
         return nil;
     
-    NSTimeInterval interval;
-    
-    result = FREGetObjectAsDouble(time, &interval);
+    NSTimeInterval timestamp;
+    result = FREGetObjectAsDouble(time, &timestamp);
     
     if (result != FRE_OK)
         return nil;
     
-    interval = interval / 1000;
+    NSTimeInterval seconds = timestamp * 0.001;
     
-    return [NSDate dateWithTimeIntervalSince1970:interval];
+    return [NSDate dateWithTimeIntervalSince1970: seconds];
 }
 
 @end

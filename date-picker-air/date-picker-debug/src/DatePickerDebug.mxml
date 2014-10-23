@@ -3,6 +3,7 @@
 
     <fx:Script><![CDATA[
         import com.github.airext.DatePicker;
+        import com.github.airext.enum.DatePickerMode;
         import com.github.airext.events.DatePickerEvent;
 
         private var picker:DatePicker = new DatePicker();
@@ -42,10 +43,22 @@
     </fx:Declarations>
 
     <s:layout>
-        <s:VerticalLayout horizontalAlign="justify" gap="40" paddingTop="40" />
+        <s:VerticalLayout horizontalAlign="justify" gap="30" paddingTop="30" />
     </s:layout>
 
     <s:Button width="100%" label="Show" click="open();" />
+
+    <s:ButtonBar width="100%" selectedIndex="2" change="picker.mode = event.target.selectedItem.mode">
+        <s:dataProvider>
+            <s:ArrayList>
+                <fx:Array>
+                    <fx:Object label="Date" mode="{DatePickerMode.DATE}" />
+                    <fx:Object label="Time" mode="{DatePickerMode.TIME}" />
+                    <fx:Object label="Both" mode="{DatePickerMode.DATE_AND_TIME}" />
+                </fx:Array>
+            </s:ArrayList>
+        </s:dataProvider>
+    </s:ButtonBar>
 
     <s:Label text="COLORS AND EFFECTS" />
 

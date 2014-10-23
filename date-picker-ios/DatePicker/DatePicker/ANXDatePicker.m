@@ -76,9 +76,9 @@ static ANXDatePicker* _sharedInstance = nil;
 
 - (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate
 {
-    NSTimeInterval timestamp = [aDate timeIntervalSince1970];
+    NSTimeInterval seconds = [aDate timeIntervalSince1970];
     
-    timestamp = timestamp * 1000;
+    NSTimeInterval timestamp = seconds * 1000;
     
     NSString* timestampAsString = [NSString stringWithFormat:@"%f", timestamp];
     

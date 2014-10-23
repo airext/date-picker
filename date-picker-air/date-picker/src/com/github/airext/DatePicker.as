@@ -246,9 +246,10 @@ public class DatePicker extends EventDispatcher
         {
             case "DatePicker.Select" :
 
-                var timestamp:Number = parseInt(event.level);
+                var timestamp:Number = parseFloat(event.level);
 
-                _date = new Date(timestamp);
+                _date = new Date();
+                _date.time = timestamp;
 
                 dispatchEvent(new DatePickerEvent(DatePickerEvent.SELECT, _date));
 
@@ -267,6 +268,8 @@ public class DatePicker extends EventDispatcher
             case "DatePicker.Error" :
 
                 dispatchEvent(new ErrorEvent(ErrorEvent.ERROR, event.level));
+
+                dispose();
 
                 break;
         }
