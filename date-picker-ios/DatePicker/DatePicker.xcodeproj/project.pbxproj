@@ -78,6 +78,7 @@
 		0E0704E419EBE35C009E0EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E0704E519EBE35C009E0EA4 /* DatePickerDebugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerDebugTests.m; sourceTree = "<group>"; };
 		0E0704F219EBF3B0009E0EA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0EF88A981A7F9AA400612CD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		162A989361BF4753BF95F6EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +207,7 @@
 		2898BCD2FCA84B3EB5A45524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EF88A981A7F9AA400612CD6 /* UIKit.framework */,
 				0E0704F219EBF3B0009E0EA4 /* Foundation.framework */,
 				162A989361BF4753BF95F6EE /* libPods.a */,
 			);
@@ -479,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,6 +557,7 @@
 				0E0704E919EBE35C009E0EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

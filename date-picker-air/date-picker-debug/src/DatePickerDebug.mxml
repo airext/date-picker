@@ -7,6 +7,8 @@
         import com.github.airext.enum.DatePickerMode;
         import com.github.airext.events.DatePickerEvent;
 
+        import spark.components.Alert;
+
         private var picker:DatePicker = DatePicker.sharedInstance();
 
         [Bindable]
@@ -14,7 +16,14 @@
 
         private function open():void
         {
-            picker.open();
+            if (DatePicker.isSupported())
+            {
+                picker.open();
+            }
+            else
+            {
+                Alert.show("DatePicker requires iOS 7.0 or greater.");
+            }
         }
 
         private function init():void

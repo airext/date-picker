@@ -225,7 +225,13 @@ public class DatePicker extends EventDispatcher
     //
     //--------------------------------------------------------------------------
 
-    public function open():void
+    /**
+     * Opens DatePicker.
+     *
+     * @return <code>true</code> if DatePicker successfully opened, or
+     * <code>false</code> if something was wrong.
+     */
+    public function open():Boolean
     {
         var date:Date = _date || new Date();
 
@@ -240,7 +246,7 @@ public class DatePicker extends EventDispatcher
 
         context.addEventListener(StatusEvent.STATUS, statusHandler);
 
-        context.call("open", date, mode, _title, settings, _appearance.getAppearance());
+        return context.call("open", date, mode, _title, settings, _appearance.getAppearance());
     }
 
     public function dispose():void

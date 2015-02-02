@@ -13,8 +13,8 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android enabled="true" package-file-name="DatePickerDebug" />
-        <packaging-ios enabled="true" package-file-name="DatePickerDebug">
+        <packaging-android use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/DatePickerDebug-app.xml" package-file-name="DatePickerDebug" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/DatePickerDebug-app.xml" package-file-name="DatePickerDebug">
           <files-to-package>
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/Default-568h@2x.png" path-in-package="Default-568h@2x.png" />
           </files-to-package>
@@ -44,4 +44,3 @@
     </orderEntry>
   </component>
 </module>
-

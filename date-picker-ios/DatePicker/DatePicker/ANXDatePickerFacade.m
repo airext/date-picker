@@ -22,7 +22,7 @@ FREObject ANXDatePickerIsSupported(FREContext context, void* functionData, uint3
 {
     FREObject supported;
     
-    FRENewObjectFromBool(1, &supported);
+    FRENewObjectFromBool([[ANXDatePicker sharedInstance] isSupported], &supported);
     
     return supported;
 }
