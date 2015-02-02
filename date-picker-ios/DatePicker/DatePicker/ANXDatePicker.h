@@ -22,6 +22,8 @@
 
 @property FREContext context;
 
+@property BOOL debug;
+
 #pragma mark API Funcitons
 
 -(BOOL) isSupported;

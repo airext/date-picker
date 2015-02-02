@@ -128,7 +128,35 @@
     
     NSTimeInterval seconds = timestamp * 0.001;
     
-    return [NSDate dateWithTimeIntervalSince1970: seconds];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *tempDate = [NSDate dateWithTimeIntervalSince1970: seconds];
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    
+    return [calendar dateByAddingComponents:comps toDate:tempDate options:0];
+}
+
++(FREObject) convertBoolToFREObject: (BOOL) value
+{
+    FREObject result = NULL;
+    
+    if (value)
+        FRENewObjectFromBool((uint32_t) 1, &result);
+    else
+        FRENewObjectFromBool((uint32_t) 0, &result);
+    
+    return result;
+}
+
++(BOOL) convertFREObjectToBool: (FREObject) value
+{
+    uint32_t tempValue;
+    
+    FREResult result = FREGetObjectAsBool(value, &tempValue);
+    
+    if (result != FRE_OK)
+        return NO;
+    
+    return tempValue > 0;
 }
 
 @end

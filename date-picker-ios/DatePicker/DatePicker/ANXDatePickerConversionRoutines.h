@@ -25,4 +25,7 @@
 
 +(NSDate*) convertFREObjectToNSDate: (FREObject) date;
 
++(FREObject) convertBoolToFREObject: (BOOL) value;
++(BOOL) convertFREObjectToBool: (FREObject) value;
+
 @end

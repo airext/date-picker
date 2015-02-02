@@ -28,6 +28,8 @@ static ANXDatePicker* _sharedInstance = nil;
 
 @synthesize context;
 
+@synthesize debug;
+
 #pragma mark API Funcitons
 
 -(BOOL) isSupported
@@ -77,6 +79,11 @@ static ANXDatePicker* _sharedInstance = nil;
 - (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate
 {
     NSTimeInterval seconds = [aDate timeIntervalSince1970];
+    
+    if (self.debug)
+    {
+        NSLog(@"[DatePicker] Info: Selected date is %@, Unix time is %f", aDate, seconds);
+    }
     
     NSTimeInterval timestamp = seconds * 1000;
     

@@ -20,6 +20,10 @@ FREObject ANXDatePickerIsSupported(FREContext context, void* functionData, uint3
 
 FREObject ANXDatePickerOpen(FREContext context, void* functionData, uint32_t argc, FREObject argv[]);
 
+FREObject ANXDatePickerGetDebug(FREContext context, void* functionData, uint32_t argc, FREObject argv[]);
+
+FREObject ANXDatePickerSetDebug(FREContext context, void* functionData, uint32_t argc, FREObject argv[]);
+
 #pragma mark FRE ContextInitializer/ContextFinalizer
 
 void ANXDatePickerContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);

@@ -50,6 +50,22 @@ public class DatePicker
     //--------------------------------------------------------------------------
 
     //------------------------------------
+    //  debug
+    //------------------------------------
+
+    public function get debug():Boolean
+    {
+        trace("DatePicker is not supported for " + Capabilities.os);
+
+        return false;
+    }
+
+    public function set debug(value:Boolean):void
+    {
+        trace("DatePicker is not supported for " + Capabilities.os);
+    }
+
+    //------------------------------------
     //  date
     //------------------------------------
 

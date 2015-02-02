@@ -4,9 +4,10 @@
     <fx:Script><![CDATA[
         import com.github.airext.DatePicker;
         import com.github.airext.enum.DatePickerMode;
+        import com.github.airext.enum.DatePickerMode;
         import com.github.airext.events.DatePickerEvent;
 
-        private var picker:DatePicker = new DatePicker();
+        private var picker:DatePicker = DatePicker.sharedInstance();
 
         [Bindable]
         private var selectedDate:Date;
@@ -18,8 +19,11 @@
 
         private function init():void
         {
+            DatePicker.sharedInstance().debug = true;
+
 //            picker.minimum = new Date(2013, 1);
-//            picker.maximum = new Date(2015, 1);
+            picker.maximum = new Date(2015, 1);
+            picker.date = new Date();
 
             picker.addEventListener(DatePickerEvent.SELECT,
                 function (event:DatePickerEvent):void
@@ -77,6 +81,6 @@
         <s:CheckBox width="100%" selected="true" label="Background Taps" change="picker.appearance.ios.backgroundTapsDisabled = !event.target.selected;" />
     </s:SkinnableContainer>
 
-    <s:Label text="{selectedDate || ''}" />
+    <s:Label text="{selectedDate ? (picker.mode == DatePickerMode.TIME ? selectedDate.toTimeString() : selectedDate.toDateString()) : ''}" />
 
 </s:Application>

@@ -92,11 +92,23 @@ FREObject ANXDatePickerOpen(FREContext context, void* functionData, uint32_t arg
     return ok;
 }
 
+FREObject ANXDatePickerGetDebug(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
+{
+    return [ANXDatePickerConversionRoutines convertBoolToFREObject:[ANXDatePicker sharedInstance].debug];
+}
+
+FREObject ANXDatePickerSetDebug(FREContext context, void* functionData, uint32_t argc, FREObject argv[])
+{
+    [ANXDatePicker sharedInstance].debug = [ANXDatePickerConversionRoutines convertFREObjectToBool:argv[0]];
+    
+    return NULL;
+}
+
 #pragma mark FRE ContextInitializer/ContextFinalizer
 
 void ANXDatePickerContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet)
 {
-    *numFunctionsToTest = 2;
+    *numFunctionsToTest = 4;
     
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctionsToTest));
     
@@ -107,6 +119,14 @@ void ANXDatePickerContextInitializer(void* extData, const uint8_t* ctxType, FREC
     func[1].name = (const uint8_t*) "open";
     func[1].functionData = NULL;
     func[1].function = &ANXDatePickerOpen;
+    
+    func[2].name = (const uint8_t*) "getDebug";
+    func[2].functionData = NULL;
+    func[2].function = &ANXDatePickerGetDebug;
+    
+    func[3].name = (const uint8_t*) "setDebug";
+    func[3].functionData = NULL;
+    func[3].function = &ANXDatePickerSetDebug;
     
     *functionsToSet = func;
     

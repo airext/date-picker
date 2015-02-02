@@ -96,6 +96,20 @@ public class DatePicker extends EventDispatcher
     //--------------------------------------------------------------------------
 
     //------------------------------------
+    //  debug
+    //------------------------------------
+
+    public function get debug():Boolean
+    {
+        return context.call("getDebug") as Boolean;
+    }
+
+    public function set debug(value:Boolean):void
+    {
+        context.call("setDebug", value);
+    }
+
+    //------------------------------------
     //  date
     //------------------------------------
 
