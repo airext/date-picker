@@ -3,6 +3,7 @@
 
     <fx:Script><![CDATA[
         import com.github.airext.DatePicker;
+        import com.github.airext.data.AndroidAppearance;
         import com.github.airext.enum.DatePickerMode;
         import com.github.airext.enum.DatePickerMode;
         import com.github.airext.events.DatePickerEvent;
@@ -13,6 +14,11 @@
 
         [Bindable]
         private var selectedDate:Date;
+
+        private function isSupported():void
+        {
+            Alert.show(String(DatePicker.isSupported()));
+        }
 
         private function open():void
         {
@@ -28,26 +34,30 @@
 
         private function init():void
         {
-            DatePicker.sharedInstance().debug = true;
+            if (DatePicker.isSupported())
+            {
+                DatePicker.sharedInstance().debug = true;
 
-//            picker.minimum = new Date(2013, 1);
-            picker.maximum = new Date(2015, 1);
-            picker.date = new Date();
+    //            picker.minimum = new Date(2013, 1);
+                picker.maximum = new Date(2015, 1);
+                picker.date = new Date();
 
-            picker.addEventListener(DatePickerEvent.SELECT,
-                function (event:DatePickerEvent):void
-                {
-                    trace("SELECT", event.date);
+                picker.addEventListener(DatePickerEvent.SELECT,
+                    function (event:DatePickerEvent):void
+                    {
+                        trace("SELECT", event.date);
 
-                    selectedDate = event.date;
-                });
+                        selectedDate = event.date;
+                    });
 
-            picker.addEventListener(Event.CANCEL,
-                function (event:Event):void
-                {
-                    trace("CANCEL");
-                });
+                picker.addEventListener(Event.CANCEL,
+                    function (event:Event):void
+                    {
+                        trace("CANCEL");
+                    });
+            }
         }
+
         ]]>
     </fx:Script>
 
@@ -58,6 +68,8 @@
     <s:layout>
         <s:VerticalLayout horizontalAlign="justify" gap="30" paddingTop="30" />
     </s:layout>
+
+    <!--<s:Button width="100%" label="IsSupported" click="isSupported();" />-->
 
     <s:Button width="100%" label="Show" click="open();" />
 
@@ -77,8 +89,22 @@
 
     <s:SkinnableContainer backgroundColor="#FFFFFF">
         <s:layout><s:VerticalLayout paddingLeft="10" paddingTop="10" paddingBottom="10" /></s:layout>
-        <s:CheckBox width="100%" label="Black Version"  change="" />
+        <s:CheckBox width="100%" label="Black Version"  change="picker.appearance.useDarkTheme = event.target.selected;" />
     </s:SkinnableContainer>
+
+    <s:ButtonBar width="100%" change="picker.appearance.android.theme = event.target.selectedItem ? event.target.selectedItem.value : 0;">
+        <s:dataProvider>
+            <s:ArrayList>
+                <fx:Array>
+                    <fx:Object label="Dark" value="{AndroidAppearance.THEME_DEVICE_DEFAULT_DARK}" />
+                    <fx:Object label="Light" value="{AndroidAppearance.THEME_DEVICE_DEFAULT_LIGHT}" />
+                    <fx:Object label="Holo D" value="{AndroidAppearance.THEME_HOLO_DARK}" />
+                    <fx:Object label="Holo L" value="{AndroidAppearance.THEME_HOLO_LIGHT}" />
+                    <fx:Object label="Default" value="{AndroidAppearance.THEME_TRADITIONAL}" />
+                </fx:Array>
+            </s:ArrayList>
+        </s:dataProvider>
+    </s:ButtonBar>
 
     <s:Label text="The black version only works oif blur effects are enabled. As blur effects require iOS 8 and later, the black version also requires iOS 8 and later" />
 

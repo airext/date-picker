@@ -5,10 +5,22 @@ package com.github.airext.data
 {
 public class RMDateSelectionViewControllerAppearance
 {
+    //--------------------------------------------------------------------------
+    //
+    //  Constructor
+    //
+    //--------------------------------------------------------------------------
+
     public function RMDateSelectionViewControllerAppearance()
     {
         super();
     }
+
+    //--------------------------------------------------------------------------
+    //
+    //  Variables
+    //
+    //--------------------------------------------------------------------------
 
     public var tintColor:Number;
 
@@ -24,6 +36,12 @@ public class RMDateSelectionViewControllerAppearance
 
     public var backgroundTapsDisabled:Boolean;
 
+    //--------------------------------------------------------------------------
+    //
+    //  Methods
+    //
+    //--------------------------------------------------------------------------
+
     public function toDTO():Object
     {
         var dto:Object =
@@ -35,7 +53,7 @@ public class RMDateSelectionViewControllerAppearance
             disableMotionEffects : disableMotionEffects,
             disableBouncingWhenShowing : disableBouncingWhenShowing,
             backgroundTapsDisabled : backgroundTapsDisabled
-        }
+        };
 
         return dto;
     }
