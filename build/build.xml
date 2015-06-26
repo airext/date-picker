@@ -31,9 +31,9 @@
         <mkdir dir="temp/ios/build/"/>
 
         <!-- Install Pods dependencies -->
-        <!--<exec executable="pod" dir="${ios.project.dir}">-->
-            <!--<arg value="install"/>-->
-        <!--</exec>-->
+        <exec executable="pod" dir="${ios.project.dir}">
+            <arg value="install"/>
+        </exec>
 
         <!-- Build iOS part of the extension -->
         <exec executable="xcodebuild" failonerror="true" dir="${ios.project.dir}">
@@ -197,7 +197,7 @@
         <copy file="temp/default/${name}.swc" todir="../bin"/>
 
         <!-- Remove temporary directory -->
-        <!--<delete dir="temp"/>-->
+        <delete dir="temp"/>
     </target>
 
 </project>
