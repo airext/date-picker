@@ -31,4 +31,4 @@ private function cancelHandler(event:DatePickerEvent):void
 
 ![iPhone5 Protrait](http://airext.github.io/date-picker/screenshots/iphone5-portrait.png)
 
-![Nexus4 Protrait Light](http://airext.github.io/date-picker/screenshots/nexus4-portrait-light.png =x539)
+![Nexus4 Protrait Light](http://airext.github.io/date-picker/screenshots/nexus4-portrait-light.png)
