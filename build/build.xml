@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Air Native Extension Build Scripts" default="all">
+
+    <!--=====================================================================-->
+    <!--                             Properties                              -->
+    <!--=====================================================================-->
+
+    <property name="name" value="date-picker" />
+
+    <property name="ios.project.dir" value="../${name}-ios/DatePicker" />
+    <property name="air.project.dir" value="../${name}-air/${name}" />
+    <property name="air-default.project.dir" value="../${name}-air/${name}-default" />
+    <property name="air-debug.project.dir" value="../${name}-air/${name}-debug" />
+    <property name="android.project.dir" value="../${name}-android" />
+
+	<property file="build.properties"/>
+
+    <!--=====================================================================-->
+    <!--                             Build All                               -->
+    <!--=====================================================================-->
+
+    <target name="all" depends="ios,android,air,default,package" description="Full build of extension"/>
+
+    <!--=====================================================================-->
+    <!--                          Build iOS Library                          -->
+    <!--=====================================================================-->
+
+	<target name="ios" description="Build iOS Library">
+
+        <!-- Create temporary directory for iOS artifacts -->
+        <mkdir dir="temp/ios/build/"/>
+
+        <!-- Install Pods dependencies -->
+        <!--<exec executable="pod" dir="${ios.project.dir}">-->
+            <!--<arg value="install"/>-->
+        <!--</exec>-->
+
+        <!-- Build iOS part of the extension -->
+        <exec executable="xcodebuild" failonerror="true" dir="${ios.project.dir}">
+            <arg line='-workspace DatePicker.xcworkspace'/>
+            <arg line='-scheme DatePicker'/>
+            <arg line='-sdk iphoneos' />
+            <arg line='-configuration Release'/>
+            <arg line='SYMROOT=$(PWD)/../build/temp/ios/build'/>
+        </exec>
+
+        <!-- Build iOS-simulator part of the extension -->
+        <exec executable="xcodebuild" failonerror="true" dir="${ios.project.dir}">
+            <arg line='-workspace DatePicker.xcworkspace'/>
+            <arg line='-scheme DatePicker'/>
+            <arg line='-sdk iphonesimulator' />
+            <arg line='-configuration Release'/>
+            <arg line='SYMROOT=$(PWD)/../build/temp/ios/build'/>
+        </exec>
+
+        <!-- Copy iOS build artifacts to temporary build folder -->
+		<copy file="temp/ios/build/Release-iphoneos/libDatePicker.a" todir="temp/ios" overwrite="true"/>
+		<copy file="temp/ios/build/Release-iphonesimulator/libDatePicker.a" tofile="temp/ios-simulator/libDatePickerSimulator.a" overwrite="true"/>
+
+        <!-- Remove temporary directory for iOS artifacts -->
+		<delete dir="temp/ios/build/"/>
+	</target>
+
+    <!--=====================================================================-->
+    <!--                        Build Android Library                        -->
+    <!--=====================================================================-->
+
+	<target name="android" description="Build android Library">
+
+        <!-- Builds Android part of the extension -->
+		<!-- Compiles Android project and makes .JAR -->
+		<exec executable="gradle" failonerror="true" dir="${android.project.dir}/datepicker">
+			<arg line="jar" />
+			<arg line="--info" />
+		</exec>
+
+		<!-- Copy Android build artifacts to temporary build folder -->
+		<copy file="${android.project.dir}/datepicker/build/libs/datepicker.jar" tofile="temp/android/libDatePicker.jar" overwrite="true"/>
+
+        <!-- Copy manifest to include it into ANE file -->
+        <copy file="${android.project.dir}/datepicker/src/main/AndroidManifest.xml" todir="temp/android" overwrite="true"/>
+
+	</target>
+
+    <!--=====================================================================-->
+    <!--                         Build AIR Library                           -->
+    <!--=====================================================================-->
+
+    <target name="air" description="Build swc library">
+
+        <!-- Create temporary directory -->
+		<mkdir dir="temp/swc/build/"/>
+
+        <!-- Gather classes for the library -->
+		<fileset dir="${air.project.dir}/src" casesensitive="yes" id="classfiles">
+			<include name="**/*.as"/>
+		</fileset>
+		<pathconvert property="classlist" refid="classfiles" pathsep=" " dirsep=".">
+			<regexpmapper from=".*src.(.*)\.as" to="\1"/>
+		</pathconvert>
+
+        <!-- Compile .SWC library -->
+        <exec executable="java" failonerror="true">
+            <arg line='-jar ${air.sdk}/lib/compc-cli.jar' />
+            <arg line='-source-path ${air.project.dir}/src'/>
+            <arg line='-output temp/swc/${name}.swc'/>
+            <arg line='-swf-version=13'/>
+            <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
+            <arg line='-include-classes ${classlist}'/>
+        </exec>
+
+        <!-- Unzip .SWC to copy internal library.swf file to corresponded platfom folders -->
+		<unzip src="temp/swc/${name}.swc" dest="temp/swc/build" overwrite="true"/>
+
+        <!-- Copy library.swf to iOS platform folder -->
+		<copy file="temp/swc/build/library.swf" todir="temp/ios" overwrite="true"/>
+
+        <!-- Copy library.swf to iOS-simulator platform folder -->
+		<copy file="temp/swc/build/library.swf" todir="temp/ios-simulator" overwrite="true"/>
+
+        <!-- Copy library.swf to Android platform folder -->
+		<copy file="temp/swc/build/library.swf" todir="temp/android" overwrite="true"/>
+
+        <!-- Remove temporary folder -->
+		<delete dir="temp/swc/build/"/>
+	</target>
+
+    <!--=====================================================================-->
+    <!--                     Build AIR Default Library                       -->
+    <!--=====================================================================-->
+
+    <target name="default" description="Build default swc library">
+
+        <!-- Create temporary folder -->
+		<mkdir dir="temp/default/"/>
+
+        <!-- Gather classes for default .SWC library -->
+		<fileset dir="${air-default.project.dir}/src" casesensitive="yes" id="classfiles2">
+			<include name="**/*.as"/>
+		</fileset>
+		<pathconvert property="classlist-default" refid="classfiles2" pathsep=" " dirsep=".">
+			<regexpmapper from=".*src.(.*)\.as" to="\1"/>
+		</pathconvert>
+
+        <!-- Compile default .SWC library -->
+        <exec executable="java" failonerror="true">
+            <arg line='-jar ${air.sdk}/lib/compc-cli.jar' />
+            <arg line='-source-path ${air-default.project.dir}/src'/>
+            <arg line='-output temp/default/${name}.swc'/>
+            <arg line='-swf-version=13'/>
+            <arg line='-external-library-path+="${air.sdk}/frameworks/libs/air/airglobal.swc"'/>
+            <arg line='-include-classes ${classlist-default}'/>
+        </exec>
+
+        <!-- Unzip .SWC to copy internal library.swf file to default platform folder -->
+		<unzip src="temp/default/${name}.swc" dest="temp/default/swc" overwrite="true"/>
+
+        <!-- Copy library.swf to default platform folder -->
+		<copy file="temp/default/swc/library.swf" todir="temp/default" overwrite="true"/>
+
+        <!-- Remove temporary folder -->
+		<delete dir="temp/default/swc"/>
+	</target>
+
+    <!--=====================================================================-->
+    <!--                         Package ANE file                            -->
+    <!--=====================================================================-->
+
+    <target name="package" description="Create the extension package">
+
+        <!-- Package ANE file-->
+        <exec executable="java" failonerror="true" dir="temp">
+            <arg line='-jar ${air.sdk}/lib/adt.jar' />
+            <arg line="-package"/>
+            <arg line="-storetype"/>
+            <arg line="pkcs12"/>
+            <arg line="-keystore"/>
+            <arg line="${keystore.file}"/>
+            <arg line="-storepass"/>
+            <arg line="${keystore.password}"/>
+            <arg line="-target"/>
+            <arg line="ane"/>
+            <arg line="${name}.ane"/>
+            <arg line="../extension.xml"/>
+            <arg line="-swc swc/${name}.swc"/>
+            <arg line="-platform iPhone-ARM -platformoptions ../platform-ios.xml -C ios/ ."/>
+            <arg line="-platform iPhone-x86 -platformoptions ../platform-ios.xml -C ios-simulator/ ."/>
+            <arg line="-platform Android-ARM -platformoptions ../platform-android.xml -C android/ ."/>
+            <!--<arg line="-platform Android-x86 -platformoptions ../platform-android.xml -C android/ ."/>-->
+            <arg line="-platform default -C default/ ."/>
+        </exec>
+
+        <!-- Move packaged .ANE file to /bin directory -->
+        <move file="temp/${name}.ane" todir="../bin"/>
+
+        <!-- Move default .SWC library to /bin directory -->
+        <copy file="temp/default/${name}.swc" todir="../bin"/>
+
+        <!-- Remove temporary directory -->
+        <!--<delete dir="temp"/>-->
+    </target>
+
+</project>

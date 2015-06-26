@@ -5,7 +5,7 @@
       <configuration name="date-picker-debug" target-platform="Mobile" main-class="DatePickerDebug" output-file="DatePickerDebug.swf" output-folder="$MODULE_DIR$/bin-debug">
         <dependencies target-player="15.0">
           <entries>
-            <entry library-id="43dc614c-8453-44e2-be07-17dcba2c550d">
+            <entry library-id="23ef368e-5394-4ec0-abc9-d2edf21ac713">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -13,7 +13,11 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/DatePickerDebug-app.xml" package-file-name="DatePickerDebug" />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/DatePickerDebug-app.xml" package-file-name="DatePickerDebug">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/Default-568h@2x.png" path-in-package="Default-568h@2x.png" />
+          </files-to-package>
+        </packaging-android>
         <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/DatePickerDebug-app.xml" package-file-name="DatePickerDebug">
           <files-to-package>
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/Default-568h@2x.png" path-in-package="Default-568h@2x.png" />
@@ -33,13 +37,12 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
-        <properties id="43dc614c-8453-44e2-be07-17dcba2c550d" />
+        <properties id="23ef368e-5394-4ec0-abc9-d2edf21ac713" />
         <CLASSES>
-          <root url="file://$MODULE_DIR$/ane" />
+          <root url="jar://$MODULE_DIR$/../../bin/date-picker.ane!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/ane" recursive="false" />
       </library>
     </orderEntry>
   </component>

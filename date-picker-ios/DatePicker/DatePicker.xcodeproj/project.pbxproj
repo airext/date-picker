@@ -80,7 +80,8 @@
 		0E0704F219EBF3B0009E0EA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EF88A981A7F9AA400612CD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		162A989361BF4753BF95F6EE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		727C40C3D01D0E01F9118FB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F4794A66E164A4B203DC5250 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +112,8 @@
 				0E0704C819EBE35C009E0EA4 /* DatePickerDebug */,
 				0E0704E219EBE35C009E0EA4 /* DatePickerDebugTests */,
 				0E0704A519EBD2D7009E0EA4 /* Products */,
-				8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */,
 				2898BCD2FCA84B3EB5A45524 /* Frameworks */,
+				0EB45D60971F86933AA5CFA1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +203,15 @@
 				0E0704E419EBE35C009E0EA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EB45D60971F86933AA5CFA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				727C40C3D01D0E01F9118FB6 /* Pods.debug.xcconfig */,
+				F4794A66E164A4B203DC5250 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		2898BCD2FCA84B3EB5A45524 /* Frameworks */ = {
@@ -331,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E00D8BEF8C4E4FE29187D87F /* Check Pods Manifest.lock */ = {
@@ -479,7 +489,7 @@
 		};
 		0E0704B619EBD2D7009E0EA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */;
+			baseConfigurationReference = 727C40C3D01D0E01F9118FB6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
@@ -491,7 +501,7 @@
 		};
 		0E0704B719EBD2D7009E0EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AA2CFC55F2D413FA3E219DE /* Pods.xcconfig */;
+			baseConfigurationReference = F4794A66E164A4B203DC5250 /* Pods.release.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;

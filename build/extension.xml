@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+  <id>com.github.airext.DatePicker</id>
+  <versionNumber>1.1.0</versionNumber>
+  <platforms>
+    <platform name="iPhone-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libDatePicker.a</nativeLibrary>
+        <initializer>ANXDatePickerInitializer</initializer>
+        <finalizer>ANXDatePickerFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="iPhone-x86">
+      <applicationDeployment>
+        <nativeLibrary>libDatePickerSimulator.a</nativeLibrary>
+        <initializer>ANXDatePickerInitializer</initializer>
+        <finalizer>ANXDatePickerFinalizer</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="Android-ARM">
+      <applicationDeployment>
+        <nativeLibrary>libDatePicker.jar</nativeLibrary>
+        <initializer>com.github.airext.DatePicker</initializer>
+        <finalizer>com.github.airext.DatePicker</finalizer>
+      </applicationDeployment>
+    </platform>
+    <platform name="default">
+      <applicationDeployment />
+    </platform>
+  </platforms>
+</extension>
