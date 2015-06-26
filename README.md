@@ -6,7 +6,8 @@ date-picker ![License MIT](http://img.shields.io/badge/license-MIT-lightgray.svg
 This [AIR Native Extension](http://www.adobe.com/devnet/air/native-extensions-for-air.html) allows using [RMDateSelectionViewController](https://github.com/CooperRS/RMDateSelectionViewController) in AIR applications.
 
 ### Requrements
- * iOS 7.0 or above
+ * iOS 7.0 or greater.
+ * Android 4.0 (API level 14) or greater. 
 
 ### Usage
 
@@ -32,3 +33,8 @@ private function cancelHandler(event:DatePickerEvent):void
 ![iPhone5 Protrait](http://airext.github.io/date-picker/screenshots/iphone5-portrait.png)
 
 ![Nexus4 Protrait Light](http://airext.github.io/date-picker/screenshots/nexus4-portrait-light.png)
+
+### Limitation
+
+* DateAndTime mode is not supported on Android
+* Black theme is not supported on iOS
