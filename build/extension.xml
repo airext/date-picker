@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension xmlns="http://ns.adobe.com/air/extension/4.0">
   <id>com.github.airext.DatePicker</id>
-  <versionNumber>1.1.0</versionNumber>
+  <versionNumber>1.2</versionNumber>
   <platforms>
     <platform name="iPhone-ARM">
       <applicationDeployment>

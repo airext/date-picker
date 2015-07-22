@@ -7,182 +7,182 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1445C66BA787B56796F8F937 /* RMDateSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D81D8CA54BB23CD7A4D8E5B5 /* RMDateSelectionViewController.h */; };
-		335FEA8D09E88CBB8E8C535B /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0003481FCE770AFA4F20C6 /* RMDateSelectionViewController.m */; };
-		364B1D280F916F2200B388B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620CF1F0C2EB00FCCC4F42FC /* Foundation.framework */; };
-		3FE1A3699C4F845644014368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BF8F3204BAA52CC82F1E8A /* CoreGraphics.framework */; };
-		7ABDBCDBDDD568CE646B84C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620CF1F0C2EB00FCCC4F42FC /* Foundation.framework */; };
-		85CB66B9DE3DF5849D6F2A42 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 262B50D632C9CFED0CFF37A1 /* Pods-dummy.m */; };
-		9F8F472AC3364E415FF673A3 /* Pods-RMDateSelectionViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A91388F166F11A45583BB /* Pods-RMDateSelectionViewController-dummy.m */; };
-		FC35B289F71FA4A1A79CAB89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAAFAAE596C6262A4F0F2CA /* QuartzCore.framework */; };
+		0C840F88641BBE4CB0B2136F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80CB513506E7E17AFCC25C8 /* CoreGraphics.framework */; };
+		12A579D2844B86D8C55DC411 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB240FB50D6EF97D399898 /* Pods-dummy.m */; };
+		1F09C548FEFEE22983C09BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA450EB6AA6B47468AEA89 /* Foundation.framework */; };
+		3D785FDCCA6E158FD71183A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724205DBE752D2C07450A4F1 /* QuartzCore.framework */; };
+		51EB4165E2D0E458108057EB /* Pods-RMDateSelectionViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E90087A0A066FB945098F89F /* Pods-RMDateSelectionViewController-dummy.m */; };
+		5E04155274D29B73E3FD7819 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA450EB6AA6B47468AEA89 /* Foundation.framework */; };
+		B16ED529286DC764739D74D7 /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E5A41FEC9C92B77CF87AD /* RMDateSelectionViewController.m */; };
+		D11ABDB48B5BA6268F1140BD /* RMDateSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BE62E1A2105A8539D60C2AE /* RMDateSelectionViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30C5295E0EE08F77F73A8025 /* PBXContainerItemProxy */ = {
+		1B9E3E4D42FCC0335D2263AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A391A9C52A191A58EEA327F0 /* Project object */;
+			containerPortal = 60734B9D8A24641D460DA13B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B3DD8EBA231CA39600972026;
+			remoteGlobalIDString = 18C0F63780908E6A68FCFA24;
 			remoteInfo = "Pods-RMDateSelectionViewController";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041A838278E57F3A800790A6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ECF6CC25294FEAB727DD41C /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		16BF8F3204BAA52CC82F1E8A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		201394B919C1E9087AB63BA7 /* Pods-RMDateSelectionViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RMDateSelectionViewController-prefix.pch"; sourceTree = "<group>"; };
-		23B51B266D484E140B961C81 /* Pods-RMDateSelectionViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController.xcconfig"; sourceTree = "<group>"; };
-		260A91388F166F11A45583BB /* Pods-RMDateSelectionViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RMDateSelectionViewController-dummy.m"; sourceTree = "<group>"; };
-		262B50D632C9CFED0CFF37A1 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		2BA4C3185C92C7E3B524E741 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		41C71F1BE722839005B4CC01 /* libPods-RMDateSelectionViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMDateSelectionViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		428DC2553E7870AABFD19AB2 /* Pods-RMDateSelectionViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController-Private.xcconfig"; sourceTree = "<group>"; };
-		4380D4F9821A49C08F175A00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		57D76C46776A2038E9AEFFFA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		5B0003481FCE770AFA4F20C6 /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = RMDateSelectionViewController/RMDateSelectionViewController.m; sourceTree = "<group>"; };
-		5D46B68CB05BB9345EF18D2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		620CF1F0C2EB00FCCC4F42FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8AAAFAAE596C6262A4F0F2CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		9441EA045E35511568E0626F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D81D8CA54BB23CD7A4D8E5B5 /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = RMDateSelectionViewController/RMDateSelectionViewController.h; sourceTree = "<group>"; };
-		E4C4DA39C18C13E3E76BD5B9 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		079E440056812AE54EC19D0F /* Pods-RMDateSelectionViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		08A8E1BBFE9FD4A17EA377B1 /* Pods-RMDateSelectionViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RMDateSelectionViewController-prefix.pch"; sourceTree = "<group>"; };
+		12073D4802E3868B73518F12 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		1506B9B98AC74AD2489C7820 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5372AEB13023B5800005276C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		6EFB240FB50D6EF97D399898 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		724205DBE752D2C07450A4F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		73CA450EB6AA6B47468AEA89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8BE62E1A2105A8539D60C2AE /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = RMDateSelectionViewController/RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		8D0C9AAA8436C97EBD48E4FA /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8E223EB48B4B374B7F49D87D /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A86E5A41FEC9C92B77CF87AD /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = RMDateSelectionViewController/RMDateSelectionViewController.m; sourceTree = "<group>"; };
+		ACE4EFA05487C409D6D5F80A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		B2D66F7030EE6661B2AF0137 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		BE0386021666FC3A23A3FE80 /* Pods-RMDateSelectionViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController.xcconfig"; sourceTree = "<group>"; };
+		C7EEF3D9BA6D2C8FB6113E09 /* libPods-RMDateSelectionViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMDateSelectionViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90087A0A066FB945098F89F /* Pods-RMDateSelectionViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RMDateSelectionViewController-dummy.m"; sourceTree = "<group>"; };
+		F7E5C2F4DC67CD975CF4735E /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		F80CB513506E7E17AFCC25C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09BDAA2F77CE2D5E9B6027E7 /* Frameworks */ = {
+		2A993F28577869D6987AEBD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364B1D280F916F2200B388B2 /* Foundation.framework in Frameworks */,
+				5E04155274D29B73E3FD7819 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C98AB5635587BE1AE9FAD31 /* Frameworks */ = {
+		B4086CC0AE012995144769B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE1A3699C4F845644014368 /* CoreGraphics.framework in Frameworks */,
-				7ABDBCDBDDD568CE646B84C2 /* Foundation.framework in Frameworks */,
-				FC35B289F71FA4A1A79CAB89 /* QuartzCore.framework in Frameworks */,
+				0C840F88641BBE4CB0B2136F /* CoreGraphics.framework in Frameworks */,
+				1F09C548FEFEE22983C09BCE /* Foundation.framework in Frameworks */,
+				3D785FDCCA6E158FD71183A0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0267C5479D3D67085556774D = {
+		1F9CC2FC438CFBC5273A17FD = {
 			isa = PBXGroup;
 			children = (
-				5D46B68CB05BB9345EF18D2F /* Podfile */,
-				F20896DC6AE571CACFE15573 /* Frameworks */,
-				DE4EE06CB99F533DAD37E544 /* Pods */,
-				440392E1A4D8AD0B46E7392F /* Products */,
-				CEFDCB8C79CD1342BDB3E607 /* Targets Support Files */,
+				8D0C9AAA8436C97EBD48E4FA /* Podfile */,
+				57BC52A360AA297BFBFBCE59 /* Frameworks */,
+				E2722092EBEE5851608845BE /* Pods */,
+				CCBAD63B4B4DAC6FE2FEBE5E /* Products */,
+				BAFC57F4D98F968D3F989E03 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		130D3DC8CCA110FA62B92595 /* Support Files */ = {
+		3CA360204B872ACB98F9B780 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				23B51B266D484E140B961C81 /* Pods-RMDateSelectionViewController.xcconfig */,
-				428DC2553E7870AABFD19AB2 /* Pods-RMDateSelectionViewController-Private.xcconfig */,
-				260A91388F166F11A45583BB /* Pods-RMDateSelectionViewController-dummy.m */,
-				201394B919C1E9087AB63BA7 /* Pods-RMDateSelectionViewController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-RMDateSelectionViewController";
-			sourceTree = "<group>";
-		};
-		440392E1A4D8AD0B46E7392F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				041A838278E57F3A800790A6 /* libPods.a */,
-				41C71F1BE722839005B4CC01 /* libPods-RMDateSelectionViewController.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		48F2B21EA0DA545DB06A1D5A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9441EA045E35511568E0626F /* Pods-acknowledgements.markdown */,
-				57D76C46776A2038E9AEFFFA /* Pods-acknowledgements.plist */,
-				262B50D632C9CFED0CFF37A1 /* Pods-dummy.m */,
-				E4C4DA39C18C13E3E76BD5B9 /* Pods-environment.h */,
-				0ECF6CC25294FEAB727DD41C /* Pods-resources.sh */,
-				2BA4C3185C92C7E3B524E741 /* Pods.debug.xcconfig */,
-				4380D4F9821A49C08F175A00 /* Pods.release.xcconfig */,
+				8E223EB48B4B374B7F49D87D /* Pods-acknowledgements.markdown */,
+				5372AEB13023B5800005276C /* Pods-acknowledgements.plist */,
+				6EFB240FB50D6EF97D399898 /* Pods-dummy.m */,
+				12073D4802E3868B73518F12 /* Pods-environment.h */,
+				F7E5C2F4DC67CD975CF4735E /* Pods-resources.sh */,
+				B2D66F7030EE6661B2AF0137 /* Pods.debug.xcconfig */,
+				ACE4EFA05487C409D6D5F80A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		B625DD5704776E97FF740B9E /* RMDateSelectionViewController */ = {
+		466AD58F47C7350A51424A3E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D81D8CA54BB23CD7A4D8E5B5 /* RMDateSelectionViewController.h */,
-				5B0003481FCE770AFA4F20C6 /* RMDateSelectionViewController.m */,
-				130D3DC8CCA110FA62B92595 /* Support Files */,
-			);
-			path = RMDateSelectionViewController;
-			sourceTree = "<group>";
-		};
-		BF487E7C44F51ED51D27C0AB /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				16BF8F3204BAA52CC82F1E8A /* CoreGraphics.framework */,
-				620CF1F0C2EB00FCCC4F42FC /* Foundation.framework */,
-				8AAAFAAE596C6262A4F0F2CA /* QuartzCore.framework */,
+				F80CB513506E7E17AFCC25C8 /* CoreGraphics.framework */,
+				73CA450EB6AA6B47468AEA89 /* Foundation.framework */,
+				724205DBE752D2C07450A4F1 /* QuartzCore.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CEFDCB8C79CD1342BDB3E607 /* Targets Support Files */ = {
+		57BC52A360AA297BFBFBCE59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				48F2B21EA0DA545DB06A1D5A /* Pods */,
+				466AD58F47C7350A51424A3E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E09BBE166F5183F658E6A64 /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BE62E1A2105A8539D60C2AE /* RMDateSelectionViewController.h */,
+				A86E5A41FEC9C92B77CF87AD /* RMDateSelectionViewController.m */,
+				8C16D94B55D6391742CBF542 /* Support Files */,
+			);
+			path = RMDateSelectionViewController;
+			sourceTree = "<group>";
+		};
+		8C16D94B55D6391742CBF542 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE0386021666FC3A23A3FE80 /* Pods-RMDateSelectionViewController.xcconfig */,
+				079E440056812AE54EC19D0F /* Pods-RMDateSelectionViewController-Private.xcconfig */,
+				E90087A0A066FB945098F89F /* Pods-RMDateSelectionViewController-dummy.m */,
+				08A8E1BBFE9FD4A17EA377B1 /* Pods-RMDateSelectionViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RMDateSelectionViewController";
+			sourceTree = "<group>";
+		};
+		BAFC57F4D98F968D3F989E03 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CA360204B872ACB98F9B780 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DE4EE06CB99F533DAD37E544 /* Pods */ = {
+		CCBAD63B4B4DAC6FE2FEBE5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B625DD5704776E97FF740B9E /* RMDateSelectionViewController */,
+				1506B9B98AC74AD2489C7820 /* libPods.a */,
+				C7EEF3D9BA6D2C8FB6113E09 /* libPods-RMDateSelectionViewController.a */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		F20896DC6AE571CACFE15573 /* Frameworks */ = {
+		E2722092EBEE5851608845BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF487E7C44F51ED51D27C0AB /* iOS */,
+				6E09BBE166F5183F658E6A64 /* RMDateSelectionViewController */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		297692C9D5283E985A7DC362 /* Headers */ = {
+		E54F106604F38228FD07FE33 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1445C66BA787B56796F8F937 /* RMDateSelectionViewController.h in Headers */,
+				D11ABDB48B5BA6268F1140BD /* RMDateSelectionViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B3DD8EBA231CA39600972026 /* Pods-RMDateSelectionViewController */ = {
+		18C0F63780908E6A68FCFA24 /* Pods-RMDateSelectionViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28F164FEC3F31DC7E5FD59FD /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */;
+			buildConfigurationList = 7367B49663391E03CC7D18D8 /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */;
 			buildPhases = (
-				E43B8D4A30D60C47BD029080 /* Sources */,
-				9C98AB5635587BE1AE9FAD31 /* Frameworks */,
-				297692C9D5283E985A7DC362 /* Headers */,
+				8F34F42FD7ABEF3BAF0AE2E4 /* Sources */,
+				B4086CC0AE012995144769B0 /* Frameworks */,
+				E54F106604F38228FD07FE33 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -190,85 +190,85 @@
 			);
 			name = "Pods-RMDateSelectionViewController";
 			productName = "Pods-RMDateSelectionViewController";
-			productReference = 41C71F1BE722839005B4CC01 /* libPods-RMDateSelectionViewController.a */;
+			productReference = C7EEF3D9BA6D2C8FB6113E09 /* libPods-RMDateSelectionViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		CB520DCB9B020B5C6205A8E2 /* Pods */ = {
+		2BEE21BE7FE08185A5526BCB /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA8CB6A0501E56DCB12A8BA5 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = E44A93EB605D77C84B5AB924 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				BDEDCE330F6B4972B03D1ECD /* Sources */,
-				09BDAA2F77CE2D5E9B6027E7 /* Frameworks */,
+				058BF76E942C8D5574C1C1CE /* Sources */,
+				2A993F28577869D6987AEBD3 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				080FA5FD2D56FF729126A021 /* PBXTargetDependency */,
+				2CA23C35330818354AFD6CD0 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 041A838278E57F3A800790A6 /* libPods.a */;
+			productReference = 1506B9B98AC74AD2489C7820 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A391A9C52A191A58EEA327F0 /* Project object */ = {
+		60734B9D8A24641D460DA13B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 025D534C7CC4CA5473A1BF01 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = DCD445A388C985DD302D3F99 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0267C5479D3D67085556774D;
-			productRefGroup = 440392E1A4D8AD0B46E7392F /* Products */;
+			mainGroup = 1F9CC2FC438CFBC5273A17FD;
+			productRefGroup = CCBAD63B4B4DAC6FE2FEBE5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB520DCB9B020B5C6205A8E2 /* Pods */,
-				B3DD8EBA231CA39600972026 /* Pods-RMDateSelectionViewController */,
+				2BEE21BE7FE08185A5526BCB /* Pods */,
+				18C0F63780908E6A68FCFA24 /* Pods-RMDateSelectionViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BDEDCE330F6B4972B03D1ECD /* Sources */ = {
+		058BF76E942C8D5574C1C1CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85CB66B9DE3DF5849D6F2A42 /* Pods-dummy.m in Sources */,
+				12A579D2844B86D8C55DC411 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E43B8D4A30D60C47BD029080 /* Sources */ = {
+		8F34F42FD7ABEF3BAF0AE2E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8F472AC3364E415FF673A3 /* Pods-RMDateSelectionViewController-dummy.m in Sources */,
-				335FEA8D09E88CBB8E8C535B /* RMDateSelectionViewController.m in Sources */,
+				51EB4165E2D0E458108057EB /* Pods-RMDateSelectionViewController-dummy.m in Sources */,
+				B16ED529286DC764739D74D7 /* RMDateSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		080FA5FD2D56FF729126A021 /* PBXTargetDependency */ = {
+		2CA23C35330818354AFD6CD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RMDateSelectionViewController";
-			target = B3DD8EBA231CA39600972026 /* Pods-RMDateSelectionViewController */;
-			targetProxy = 30C5295E0EE08F77F73A8025 /* PBXContainerItemProxy */;
+			target = 18C0F63780908E6A68FCFA24 /* Pods-RMDateSelectionViewController */;
+			targetProxy = 1B9E3E4D42FCC0335D2263AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		51C7FA29003B39DA97CA809A /* Release */ = {
+		30078E2989DA76DBE6F05E8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4380D4F9821A49C08F175A00 /* Pods.release.xcconfig */;
+			baseConfigurationReference = ACE4EFA05487C409D6D5F80A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -282,9 +282,9 @@
 			};
 			name = Release;
 		};
-		7ECB0AF2E13E38A0E5961D2B /* Release */ = {
+		58F0CC51E1698CF103CB8F09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428DC2553E7870AABFD19AB2 /* Pods-RMDateSelectionViewController-Private.xcconfig */;
+			baseConfigurationReference = 079E440056812AE54EC19D0F /* Pods-RMDateSelectionViewController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMDateSelectionViewController/Pods-RMDateSelectionViewController-prefix.pch";
@@ -298,9 +298,43 @@
 			};
 			name = Release;
 		};
-		8B15AF804714F37ED438462B /* Debug */ = {
+		5DF89A980BC4955A53E14EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428DC2553E7870AABFD19AB2 /* Pods-RMDateSelectionViewController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B35D42CDE89CD974227EB3AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 079E440056812AE54EC19D0F /* Pods-RMDateSelectionViewController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMDateSelectionViewController/Pods-RMDateSelectionViewController-prefix.pch";
@@ -314,7 +348,23 @@
 			};
 			name = Debug;
 		};
-		9C71C7BAD459EA9B805679B6 /* Debug */ = {
+		C7923B5D51EF4DECA16AE917 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2D66F7030EE6661B2AF0137 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA653DF6B39D3D94146554F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,87 +403,37 @@
 			};
 			name = Debug;
 		};
-		B3113BA86437041C508A2388 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BA4C3185C92C7E3B524E741 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D041C79C4ED8B95473C4D728 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		025D534C7CC4CA5473A1BF01 /* Build configuration list for PBXProject "Pods" */ = {
+		7367B49663391E03CC7D18D8 /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C71C7BAD459EA9B805679B6 /* Debug */,
-				D041C79C4ED8B95473C4D728 /* Release */,
+				B35D42CDE89CD974227EB3AC /* Debug */,
+				58F0CC51E1698CF103CB8F09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28F164FEC3F31DC7E5FD59FD /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */ = {
+		DCD445A388C985DD302D3F99 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B15AF804714F37ED438462B /* Debug */,
-				7ECB0AF2E13E38A0E5961D2B /* Release */,
+				EA653DF6B39D3D94146554F7 /* Debug */,
+				5DF89A980BC4955A53E14EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA8CB6A0501E56DCB12A8BA5 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		E44A93EB605D77C84B5AB924 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3113BA86437041C508A2388 /* Debug */,
-				51C7FA29003B39DA97CA809A /* Release */,
+				C7923B5D51EF4DECA16AE917 /* Debug */,
+				30078E2989DA76DBE6F05E8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A391A9C52A191A58EEA327F0 /* Project object */;
+	rootObject = 60734B9D8A24641D460DA13B /* Project object */;
 }
