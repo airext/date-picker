@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.DatePicker;
 import com.github.airext.datepicker.data.ExtraKeys;
 
@@ -16,6 +15,8 @@ import java.util.Calendar;
  */
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener
 {
+    private boolean wasDateSelected = false;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState)
     {
@@ -49,15 +50,9 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        return new DatePickerDialog(getActivity(), theme, this, year, month, day);
-    }
+        DatePickerDialog dialog = new DatePickerDialog(getActivity(), theme, this, year, month, day);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-
-        Log.d("DatePicker", "DatePickerFragment.bundle:" + savedInstanceState);
+        return dialog;
     }
 
     @Override
@@ -66,12 +61,19 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month, day);
 
+        wasDateSelected = true;
+
         com.github.airext.DatePicker.dispatch("DatePicker.Select", String.valueOf(calendar.getTimeInMillis()));
     }
 
     @Override
-    public void onCancel(DialogInterface dialog)
+    public void onDestroy()
     {
-        super.onCancel(dialog);
+        super.onDestroy();
+
+        if (!wasDateSelected)
+        {
+            com.github.airext.DatePicker.dispatchStatus("DatePicker.Cancel");
+        }
     }
 }

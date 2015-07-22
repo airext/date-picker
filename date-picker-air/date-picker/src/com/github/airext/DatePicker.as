@@ -262,6 +262,8 @@ public class DatePicker extends EventDispatcher
 
     private function statusHandler(event:StatusEvent):void
     {
+        trace(event);
+
         switch (event.code)
         {
             case "DatePicker.Select" :

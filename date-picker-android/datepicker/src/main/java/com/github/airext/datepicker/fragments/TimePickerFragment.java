@@ -20,6 +20,8 @@ import java.util.Date;
  */
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener
 {
+    private boolean wasTimeSelected = false;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState)
     {
@@ -61,14 +63,19 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         Calendar calendar = Calendar.getInstance();
         calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE), hourOfDay, minute);
 
+        wasTimeSelected = true;
+
         DatePicker.dispatch("DatePicker.Select", String.valueOf(calendar.getTimeInMillis()));
     }
 
     @Override
-    public void onCancel(DialogInterface dialog)
+    public void onDestroy()
     {
-        super.onCancel(dialog);
+        super.onDestroy();
 
-        DatePicker.dispatchStatus("DatePicker.Cancel");
+        if (!wasTimeSelected)
+        {
+            com.github.airext.DatePicker.dispatchStatus("DatePicker.Cancel");
+        }
     }
 }
